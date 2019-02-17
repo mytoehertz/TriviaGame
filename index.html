@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Trivia!</title>
+
+</head>
+
+<body>
+    <br><br>
+    <header>
+        <h1>
+            Coffee Trivial
+        </h1>
+
+        <h4>
+            How much do you really know about the coffee industry?!
+        </h4>
+        <h1 id="display"></h1>
+
+
+        <h1 id="right"></h1>
+        <h1 id="wrong"></h1>
+
+        <button id="startButton" onclick="startGame()"class="btn btn-danger" >Start Game</button>
+    </header>
+        
+     
+
+    <br><br><br>
+    <section>
+        <div class="container">
+            <div class="row box">
+                <div class="col-md-6">
+                    <!--Questions here-->
+                    <p id="question"></p>
+                </div>
+                <div class="col-md-6">
+                    <!--Answers here-->
+                    <form>
+                        
+                        <input type="radio" name="choice" value="option1">
+                        <label id="answer1" for="option1"></label>
+                        <br>
+                        <input type="radio" name="choice" value="option2">
+                        <label id="answer2" for="option2"></label>
+                        <br>
+                        <input type="radio" name="choice" value="option3">
+                        <label id="answer3" for="option3"></label>
+                        <br>
+                        <input type="radio" name="choice" value="option4">
+                        <label id="answer4" for="option4"></label>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-5">
+
+            </div>
+
+            <div class="col-sm-2">
+                <button onclick="submitAnswer()" type="button" class="btn btn-success btn-lg">Submit</button> </div>
+
+            <div class="col-md-5">
+
+            </div>
+
+        </div>
+    </div>
+
+    <br><br><br>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+.box {
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: 50%;
+    text-shadow: 2px 2px black;
+}
+    
+body {
+    background-image: url("../images/grid.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+h4 {
+    color: white;
+    text-align: center;
+}
+
+div.col-md-6{
+    border: 2px solid gray;
+}
+
+header {
+    border: 2px solid whitesmoke;
+    background-image: url("../images/latte.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    position: 50%;
+    background-position-y: 30%;
+    text-shadow: 2px 2px black;
+    margin-top: 20px;
+    text-align: justify;
+    
+}
+
+#startButton {
+    background-position-x: 50%;
+    margin-left: 45%;
+}
