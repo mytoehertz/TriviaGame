@@ -18,7 +18,7 @@ let lap = 1;
 const coffeQuestions = [
 
 {
-  Question: "Where is coffee from?",
+  Question: "Where was coffee discovered?",
   Answer: ["A plant", "The ground", "Europe"],
   Correct: "Africa",
 },
@@ -36,7 +36,17 @@ const coffeQuestions = [
   Question: "What does latte mean?",
   Answer: ["My favorite drink!", "What I get every morning", "Drip coffee with steamed milk"],
   Correct: "Milk",
-}
+},
+{
+  Question: "What has more caffeine?",
+  Answer: ["Espresso", "Cascara", "Cortado"],
+  Correct: "Drip Coffee",
+},
+{
+  Question: "What is the term for coffee fruit?",
+  Answer: ["A plant", "The bean", "Answer 1 and 2"],
+  Correct: "Cherry",
+},
 
 ];
 
@@ -57,11 +67,17 @@ function startGame() {
    $("#answer2").text(tempQuestion.Answer[1]);
    $("#answer3").text(tempQuestion.Answer[2]);
    startClock();
+   
+   if (time < 0){
+    alert("You ran out of time");
+    wrongAnswer++;
+    reset();
+  }
+
     } 
 //submitAnswer checks radio button and verifies if correct. Adds points to keep track of correct and inccorrect answers
     function submitAnswer() {
      let radios = document.getElementsByName("choice");
-     let checked = false;
      let userAnswer;
      
      for(i = 0 ; i < radios.length; i++ ) {
@@ -76,11 +92,7 @@ function startGame() {
      alert("You must select an answer");
      return;
    }
-   if (time < 0){
-     alert("You ran out of time");
-     wrongAnswer++;
-     reset();
-   }
+   
    // Correct answer
    if(userAnswer === "option4") {
       alert("Answer is correct!");
